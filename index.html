@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflective Task Prototype</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div>
+        <p class="header-kicker">Reflective Assignment Session</p>
+        <h1>Reflective Task Prototype</h1>
+        <p class="header-subtext">
+          Planning, monitoring, and reflection support during short academic tasks
+        </p>
+      </div>
+      <div class="progress-pill">Step 1 of 3</div>
+    </div>
+  </header>
+
+  <main class="page-shell page-shell--two-column">
+    <section class="main-card">
+      <span class="eyebrow">Assignment Overview</span>
+      <h2>Academic Task</h2>
+      <p>
+        You will complete two short subtasks based on a short reading passage:
+      </p>
+      <ul>
+        <li>One short-response summary</li>
+        <li>One multiple-choice section</li>
+      </ul>
+      <p>
+        You may choose which subtask to complete first. The system may occasionally
+        pause you for brief reflection prompts as you work.
+      </p>
+
+      <div class="button-row">
+        <button class="button button--primary js-start-task" data-task="short-response">
+          Start with Short Response
+        </button>
+        <button class="button button--secondary js-start-task" data-task="multiple-choice">
+          Start with Multiple Choice
+        </button>
+      </div>
+    </section>
+
+    <aside class="side-card">
+      <span class="eyebrow">Session Notes</span>
+      <h3>Your reflections</h3>
+      <p class="muted-text">
+        Brief planning and confidence notes you save during the assignment will appear here.
+      </p>
+
+      <div class="notes-block">
+        <p><strong>Starting task:</strong> <span id="notes-starting-task">Not selected yet</span></p>
+        <p><strong>Plan:</strong> <span id="notes-plan">No plan saved yet</span></p>
+      </div>
+    </aside>
+  </main>
+
+  <div class="modal-backdrop hidden" id="planning-modal">
+    <div class="modal">
+      <span class="eyebrow">Before You Begin</span>
+      <h2 id="modal-title">Start Task</h2>
+      <p id="modal-choice-text"></p>
+
+      <div class="prompt-box">
+        <p class="prompt-label">Take a moment to think about your approach.</p>
+        <label for="planning-response">
+          How do you plan to complete this assignment?
+        </label>
+        <textarea
+          id="planning-response"
+          rows="6"
+          placeholder="Which task will you start with, and why? How will you approach the assignment?"
+        ></textarea>
+      </div>
+
+      <div class="button-row button-row--modal">
+        <button class="button button--ghost" id="go-back-button">Go Back</button>
+        <button class="button button--secondary" id="continue-without-saving">
+          Continue Without Saving
+        </button>
+        <button class="button button--primary" id="save-and-continue">
+          Save and Continue
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

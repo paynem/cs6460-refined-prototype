@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflective Task Prototype - Task</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div>
+        <p class="header-kicker">Reflective Assignment Session</p>
+        <h1>Complete the Assignment</h1>
+        <p class="header-subtext">
+          Read the passage and complete both subtasks. You may be asked to briefly reflect as you work.
+        </p>
+      </div>
+      <div class="progress-pill">Step 2 of 3</div>
+    </div>
+  </header>
+
+  <main class="page-shell page-shell--two-column">
+    <section class="main-card">
+      <span class="eyebrow">Reading Passage</span>
+      <div class="passage-box">
+        <p>
+          An algorithm is a step-by-step procedure used to solve a problem or perform a task.
+          In computer science, algorithms are used to process data, make decisions, and
+          automate complex operations. Different algorithms can solve the same problem, but
+          some are more efficient than others. Choosing an efficient algorithm can
+          significantly reduce the time and computing resources required to complete a task.
+        </p>
+      </div>
+
+      <div id="task-content"></div>
+    </section>
+
+    <aside class="side-card">
+      <span class="eyebrow">Session Notes</span>
+      <h3>Your reflections</h3>
+      <div class="notes-block">
+        <p><strong>Starting task:</strong> <span id="notes-starting-task"></span></p>
+        <p><strong>Plan:</strong> <span id="notes-plan"></span></p>
+        <p><strong>Check-in:</strong> <span id="notes-checkin">No check-in saved yet</span></p>
+      </div>
+    </aside>
+  </main>
+
+  <div class="modal-backdrop hidden" id="checkin-modal">
+    <div class="modal">
+      <span class="eyebrow">Quick Check-In</span>
+      <h2>Pause and Check In</h2>
+      <p>Before you continue, take a brief moment to reflect on the work you just completed.</p>
+
+      <div class="prompt-box">
+        <label for="confidence-select"><strong>How confident are you in what you just submitted?</strong></label>
+        <select id="confidence-select">
+          <option value="">Select an option</option>
+          <option value="Not confident">Not confident</option>
+          <option value="Somewhat confident">Somewhat confident</option>
+          <option value="Very confident">Very confident</option>
+        </select>
+
+        <label for="checkin-response" class="top-label">
+          What, if anything, would you want to double-check before moving on?
+        </label>
+        <textarea
+          id="checkin-response"
+          rows="5"
+          placeholder="Optional reflection"
+        ></textarea>
+      </div>
+
+      <div class="button-row button-row--modal">
+        <button class="button button--secondary" id="checkin-skip-button">Continue Without Saving</button>
+        <button class="button button--primary" id="checkin-save-button">Save and Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="final-modal">
+    <div class="modal">
+      <span class="eyebrow">Final Reflection</span>
+      <h2>Final Reflection</h2>
+      <p>You have completed both subtasks. Before finishing, take one last moment to reflect on your approach.</p>
+
+      <div class="prompt-box">
+        <label for="final-response">
+          Did your approach change as you worked through the assignment?
+        </label>
+        <textarea
+          id="final-response"
+          rows="5"
+          placeholder="Optional final reflection"
+        ></textarea>
+      </div>
+
+      <div class="button-row button-row--modal">
+        <button class="button button--secondary" id="final-skip-button">Finish Without Saving</button>
+        <button class="button button--primary" id="final-save-button">Save and Finish</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

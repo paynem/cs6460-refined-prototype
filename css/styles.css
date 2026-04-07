@@ -232,6 +232,12 @@ ul {
   margin-top: 0;
   font-weight: 700;
 }
+.prompt-helper {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
 
 textarea {
   width: 100%;
@@ -385,4 +391,10 @@ select {
   color: #b42318;
   font-size: 0.95rem;
   line-height: 1.4;
+}
+.prompt-helper {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
 }

@@ -59,36 +59,38 @@
       </div>
     </aside>
   </main>
+<div class="modal-backdrop hidden" id="planning-modal">
+  <div class="modal">
+    <span class="eyebrow">Before You Begin</span>
+    <h2 id="modal-title">Start Task</h2>
+    <p id="modal-choice-text"></p>
 
-  <div class="modal-backdrop hidden" id="planning-modal">
-    <div class="modal">
-      <span class="eyebrow">Before You Begin</span>
-      <h2 id="modal-title">Start Task</h2>
-      <p id="modal-choice-text"></p>
+    <div class="prompt-box">
+      <p class="prompt-label">Take a moment to think about your approach.</p>
+      <label for="planning-response">
+        How do you plan to complete this assignment?
+      </label>
+      <textarea
+        id="planning-response"
+        rows="6"
+        placeholder="Which task will you start with, and why? How will you approach the assignment?"
+      ></textarea>
+      <p class="prompt-helper">
+        This response is optional. You may enter a note or skip this step and continue.
+      </p>
+    </div>
 
-      <div class="prompt-box">
-        <p class="prompt-label">Take a moment to think about your approach.</p>
-        <label for="planning-response">
-          How do you plan to complete this assignment?
-        </label>
-        <textarea
-          id="planning-response"
-          rows="6"
-          placeholder="Which task will you start with, and why? How will you approach the assignment?"
-        ></textarea>
-      </div>
-
-      <div class="button-row button-row--modal">
-        <button class="button button--ghost" id="go-back-button">Go Back</button>
-        <button class="button button--secondary" id="continue-without-saving">
-          Continue Without Saving
-        </button>
-        <button class="button button--primary" id="save-and-continue">
-          Save and Continue
-        </button>
-      </div>
+    <div class="button-row button-row--modal">
+      <button class="button button--ghost" id="go-back-button">Go Back</button>
+      <button class="button button--secondary" id="continue-without-saving">
+        Skip for Now
+      </button>
+      <button class="button button--primary" id="save-and-continue">
+        Save and Continue
+      </button>
     </div>
   </div>
+</div>
 
   <script src="js/app.js"></script>
 </body>

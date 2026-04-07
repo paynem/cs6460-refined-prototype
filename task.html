@@ -47,37 +47,67 @@
     </aside>
   </main>
 
-  <div class="modal-backdrop hidden" id="checkin-modal">
-    <div class="modal">
-      <span class="eyebrow">Quick Check-In</span>
-      <h2>Pause and Check In</h2>
-      <p>Before you continue, take a brief moment to reflect on the work you just completed.</p>
+<div class="modal-backdrop hidden" id="checkin-modal">
+  <div class="modal">
+    <span class="eyebrow">Quick Check-In</span>
+    <h2>Pause and Check In</h2>
+    <p>Before you continue, take a brief moment to reflect on the work you just completed.</p>
 
-      <div class="prompt-box">
-        <label for="confidence-select"><strong>How confident are you in what you just submitted?</strong></label>
-        <select id="confidence-select">
-          <option value="">Select an option</option>
-          <option value="Not confident">Not confident</option>
-          <option value="Somewhat confident">Somewhat confident</option>
-          <option value="Very confident">Very confident</option>
-        </select>
+    <div class="prompt-box">
+      <label for="confidence-select"><strong>How confident are you in what you just submitted?</strong></label>
+      <select id="confidence-select">
+        <option value="">Select an option</option>
+        <option value="Not confident">Not confident</option>
+        <option value="Somewhat confident">Somewhat confident</option>
+        <option value="Very confident">Very confident</option>
+      </select>
 
-        <label for="checkin-response" class="top-label">
-          What, if anything, would you want to double-check before moving on?
-        </label>
-        <textarea
-          id="checkin-response"
-          rows="5"
-          placeholder="Optional reflection"
-        ></textarea>
-      </div>
+      <label for="checkin-response" class="top-label">
+        What, if anything, would you want to double-check before moving on?
+      </label>
+      <textarea
+        id="checkin-response"
+        rows="5"
+        placeholder="Optional reflection"
+      ></textarea>
+      <p class="prompt-helper">
+        This reflection is optional. You may enter a note or skip this step and continue.
+      </p>
+    </div>
 
-      <div class="button-row button-row--modal">
-        <button class="button button--secondary" id="checkin-skip-button">Continue Without Saving</button>
-        <button class="button button--primary" id="checkin-save-button">Save and Continue</button>
-      </div>
+    <div class="button-row button-row--modal">
+      <button class="button button--secondary" id="checkin-skip-button">Skip for Now</button>
+      <button class="button button--primary" id="checkin-save-button">Save and Continue</button>
     </div>
   </div>
+</div>
+
+<div class="modal-backdrop hidden" id="final-modal">
+  <div class="modal">
+    <span class="eyebrow">Final Reflection</span>
+    <h2>Final Reflection</h2>
+    <p>You have completed both subtasks. Before finishing, take one last moment to reflect on your approach.</p>
+
+    <div class="prompt-box">
+      <label for="final-response">
+        Did your approach change as you worked through the assignment?
+      </label>
+      <textarea
+        id="final-response"
+        rows="5"
+        placeholder="Optional final reflection"
+      ></textarea>
+      <p class="prompt-helper">
+        This reflection is optional. You may enter a note or skip this step and finish.
+      </p>
+    </div>
+
+    <div class="button-row button-row--modal">
+      <button class="button button--secondary" id="final-skip-button">Skip for Now</button>
+      <button class="button button--primary" id="final-save-button">Save and Finish</button>
+    </div>
+  </div>
+</div>
 
   <div class="modal-backdrop hidden" id="final-modal">
     <div class="modal">

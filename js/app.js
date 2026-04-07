@@ -96,7 +96,7 @@ if (currentPage === "index.html") {
     const planText = planningResponse.value.trim();
 
     if (!planText) {
-      showPlanningError("Enter a planning note before saving, or choose Continue Without Saving.");
+      showPlanningError("Enter a planning note before saving, or choose Skip for Now.");
       return;
     }
 
@@ -357,7 +357,7 @@ if (currentPage === "task.html") {
     const checkinText = checkinResponse.value.trim();
 
     if (!confidenceValue && !checkinText) {
-      showCheckinError("Select a confidence level or enter a note before saving, or choose Continue Without Saving.");
+      showCheckinError("Select a confidence level or enter a note before saving, or choose Skip for Now.");
       return;
     }
 
@@ -380,7 +380,7 @@ if (currentPage === "task.html") {
     const finalText = finalResponse.value.trim();
 
     if (!finalText) {
-      showFinalError("Enter a final reflection before saving, or choose Finish Without Saving.");
+      showFinalError("Enter a final reflection before saving, or choose Skip for Now.");
       return;
     }
 
